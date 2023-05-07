@@ -1,6 +1,7 @@
 from constants import COLORS, DIRECTIONS
 from turtle import Screen, Turtle
-from helpers import get_random_color, move_toward_random_direction
+from helpers import move_toward_random_direction
+import random
 
 tim = Turtle()
 tim.shape('turtle')
@@ -9,7 +10,7 @@ tim.speed('fastest')
 screen = Screen()
 
 for _ in range(50):
-    tim.color(get_random_color(COLORS))
+    tim.color(random.choice(COLORS))
     move_toward_random_direction(tim, DIRECTIONS)
 
 screen.exitonclick()
