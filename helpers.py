@@ -15,3 +15,9 @@ def draw_shape(turtle, number_of_sides):
         turtle.forward(100)
         turtle.right(angle)
 
+
+def move_toward_random_direction(turtle, directions):
+    directions_count = len(directions)
+    random_direction = directions[random.randint(0, directions_count - 1)]
+    turtle.right(random_direction)
+    turtle.forward(100)
